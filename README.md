@@ -3,6 +3,7 @@
 ### Harman_Busan_2024
 #### Harman_Busan_2024
 
+```
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
@@ -20,3 +21,4 @@ static void MX_USART2_UART_Init(void);
   * @brief  The application entry point.
   * @retval int
   */
+```
