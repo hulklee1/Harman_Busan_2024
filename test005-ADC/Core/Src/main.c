@@ -21,6 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "myLib.h"
 
 /* USER CODE END Includes */
 
@@ -62,18 +63,6 @@ static void MX_TIM3_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-int __io_putchar(int ch)
-{
-	HAL_UART_Transmit(&huart2, &ch, 1, 10);
-	return ch;
-}
-
-int GetAdcValue()
-{
-	HAL_ADC_Start(&hadc1);
-	HAL_ADC_PollForConversion(&hadc1, 10);
-	return HAL_ADC_GetValue(&hadc1);
-}
 
 int ox = 0; oy = 0;
 void ScreenPos()
@@ -86,6 +75,7 @@ void ScreenPos()
 	printf("\033[%d;%dH \r\n", oy, ox);
 	printf("\033[%d;%dH@\r\n", y, x); ox = x; oy = y;
 }
+
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
 	int r1 = GetAdcValue();
@@ -129,11 +119,8 @@ int main(void)
   MX_ADC1_Init();
   MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
-  printf("\033[2J");	// screen clear
-  printf("\033[1;1H");	// Move cursor pos to (1,1)
-  printf("Program Started....Press Blue button to continue\r\n");
-  while(HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin));  // (B1 == 0) if pressed
-  printf("\033[2J");	// screen clear
+
+  ProgramStart();
 
   /* USER CODE END 2 */
 
