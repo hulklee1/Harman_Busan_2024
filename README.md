@@ -2,9 +2,8 @@
 ## Harman_Busan_2024
 ### Harman_Busan_2024
 #### Harman_Busan_2024
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/331dd265-7b51-401d-8962-1a4040c9f01c/db316969-0e34-4836-b685-6ba69b5b5335/Untitled.png)
 
-
+https://github.com/hulklee1/Harman_Busan_2024/blob/main/%ED%9A%8C%EB%A1%9C%EA%B5%AC%EC%84%B1%EB%8F%84.jpg
 
 ```
 /* USER CODE BEGIN Header */
